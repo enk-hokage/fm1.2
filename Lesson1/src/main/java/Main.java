@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
-        AnnogramApplication annogramApplication = new AnnogramApplication();
+        AnagramApplication anagramApplication = new AnagramApplication();
 
-        String [] words = annogramApplication.splitPhrase(annogramApplication.startApplication());
+        String [] words = anagramApplication.splitPhrase(anagramApplication.startApplication());
 
         for (int i = 0; i < words.length; i++){
 
-            String result = annogramApplication.reverseWord(words[i]);
+            String result = anagramApplication.reverseWord(words[i]);
 
             while(i != words.length){
                 System.out.print(result + " ");

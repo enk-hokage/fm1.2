@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AnnogramApplication {
+public class AnagramApplication {
 
     public String startApplication(){
         System.out.println("Write a text for reverse");
