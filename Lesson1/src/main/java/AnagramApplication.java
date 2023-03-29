@@ -1,16 +1,38 @@
 import java.util.Scanner;
 
+
 public class AnagramApplication {
 
-    public String startApplication(){
+    public void startApplication(){
+        String [] words = splitPhrase(waitForText());
+
+        for (int i = 0; i < words.length; i++){
+
+            String result = reverseWord(words[i]);
+
+            while(i != words.length){
+                System.out.print(result + " ");
+                break;
+            }
+        }
+    }
+
+    private String waitForText(){
         System.out.println("Write a text for reverse");
         Scanner console = new Scanner(System.in);
+
         String phrase = console.nextLine();
 
         return phrase;
     }
 
-    public String reverseWord(String wordForReverse){
+    private String[] splitPhrase(String phraseToSplite){
+
+        String [] words = phraseToSplite.split(" ");
+        return words;
+    }
+
+    private String reverseWord(String wordForReverse){
         int lengthOfWord = wordForReverse.length();
 
         char[] letters = new char[lengthOfWord];
@@ -47,12 +69,6 @@ public class AnagramApplication {
             result.append(letters[i]);
         }
         return result.toString();
-    }
-
-
-    public String[] splitPhrase(String phraseToSplite){
-        String [] words = phraseToSplite.split(" ");
-        return words;
     }
 
 }
