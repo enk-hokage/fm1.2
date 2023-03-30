@@ -1,3 +1,5 @@
+package AnagramApplication;
+
 public class WordSplitter {
 
     public String[] splitPhrase(String phraseToSplite){

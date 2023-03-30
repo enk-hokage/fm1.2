@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import AnagramApplication.AnagramApplication;
 
 public class Main{
     public static void main(String[] args) {

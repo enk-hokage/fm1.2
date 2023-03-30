@@ -1,3 +1,5 @@
+package AnagramApplication;
+
 import java.util.Scanner;
 
 public class ConsoleReader {
