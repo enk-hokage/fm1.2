@@ -5,12 +5,12 @@ public class AnagramApplication {
 
     public void startApplication(){
         TextProcessor textProcessor = new TextProcessor();
+        AnagramProcessor anagramProcessor = new AnagramProcessor();
         String text = textProcessor.waitForText();
 
-        WordSplitter wordSplitter = new WordSplitter();
-        String [] words = wordSplitter.splitPhrase(text);
+        String [] words = anagramProcessor.splitPhrase(text);
 
-        textProcessor.outputResult(words);
+        textProcessor.outputResult(anagramProcessor.process(words));
 
     }
 }

@@ -13,18 +13,8 @@ public class TextProcessor {
         return phrase;
     }
 
-    public void outputResult(String words[]){
-
-        for (int i = 0; i < words.length; i++){
-            AnagramProcessor anagramProcessor = new AnagramProcessor();
-
-            String result = anagramProcessor.reverseWord(words[i]);
-
-            while(i != words.length){
-                System.out.print(result + " ");
-                break;
-            }
-        }
+    public void outputResult(String result){
+        System.out.println(result);
     }
 
 }
