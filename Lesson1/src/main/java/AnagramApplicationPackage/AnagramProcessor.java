@@ -1,4 +1,4 @@
-package AnagramApplication;
+package AnagramApplicationPackage;
 
 public class AnagramProcessor {
 

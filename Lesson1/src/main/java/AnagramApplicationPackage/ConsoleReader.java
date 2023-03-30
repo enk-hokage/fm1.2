@@ -1,4 +1,4 @@
-package AnagramApplication;
+package AnagramApplicationPackage;
 
 import java.util.Scanner;
 

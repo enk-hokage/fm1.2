@@ -1,6 +1,4 @@
-package AnagramApplication;
-
-import java.util.Scanner;
+package AnagramApplicationPackage;
 
 
 public class AnagramApplication {

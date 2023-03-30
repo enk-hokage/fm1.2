@@ -1,4 +1,4 @@
-import AnagramApplication.AnagramApplication;
+import AnagramApplicationPackage.AnagramApplication;
 
 public class Main{
     public static void main(String[] args) {
