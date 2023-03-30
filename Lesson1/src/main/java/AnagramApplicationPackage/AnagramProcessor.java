@@ -2,19 +2,7 @@ package AnagramApplicationPackage;
 
 public class AnagramProcessor {
 
-    public void process(String words[]){
-        for (int i = 0; i < words.length; i++){
-
-            String result = reverseWord(words[i]);
-
-            while(i != words.length){
-                System.out.print(result + " ");
-                break;
-            }
-        }
-    }
-
-    private String reverseWord(String wordForReverse){
+    public String reverseWord(String wordForReverse){
         int lengthOfWord = wordForReverse.length();
 
         char[] letters = new char[lengthOfWord];
