@@ -2,7 +2,8 @@ package AnagramApplicationPackage;
 
 public class AnagramProcessor {
 
-    public String process(String[] words){
+    public String process(String text){
+        String [] words = splitPhrase(text);
         String[] reversedWords = new String[words.length];
         for (int i = 0; i < words.length; i++){
 

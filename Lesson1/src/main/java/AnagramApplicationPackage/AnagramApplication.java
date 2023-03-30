@@ -6,11 +6,9 @@ public class AnagramApplication {
     public void startApplication(){
         TextProcessor textProcessor = new TextProcessor();
         AnagramProcessor anagramProcessor = new AnagramProcessor();
-        String text = textProcessor.waitForText();
+        String text = textProcessor.readText();
 
-        String [] words = anagramProcessor.splitPhrase(text);
-
-        textProcessor.outputResult(anagramProcessor.process(words));
+        textProcessor.outputResult(anagramProcessor.process(text));
 
     }
 }

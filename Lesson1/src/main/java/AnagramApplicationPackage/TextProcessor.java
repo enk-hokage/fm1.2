@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TextProcessor {
 
-    public String waitForText(){
+    public String readText(){
         System.out.println("Write a text for reverse");
         Scanner console = new Scanner(System.in);
 
