@@ -12,7 +12,7 @@ public class AnagramProcessor {
         }
     }
 
-    public String reverseWord(String wordForReverse){
+    private String reverseWord(String wordForReverse){
         int lengthOfWord = wordForReverse.length();
 
         char[] letters = new char[lengthOfWord];
