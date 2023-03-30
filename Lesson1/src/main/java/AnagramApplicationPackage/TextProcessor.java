@@ -14,6 +14,7 @@ public class TextProcessor {
     }
 
     public void outputResult(String words[]){
+
         for (int i = 0; i < words.length; i++){
             AnagramProcessor anagramProcessor = new AnagramProcessor();
 
