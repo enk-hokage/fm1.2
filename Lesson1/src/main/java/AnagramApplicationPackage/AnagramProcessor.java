@@ -14,7 +14,7 @@ public class AnagramProcessor {
 
     public String[] splitPhrase(String phraseToSplite){
 
-        String [] words = phraseToSplite.split(" ");
+        String [] words = phraseToSplite.split("\\s+");
         return words;
     }
 
