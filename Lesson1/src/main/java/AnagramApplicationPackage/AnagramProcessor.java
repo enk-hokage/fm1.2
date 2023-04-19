@@ -2,21 +2,26 @@ package AnagramApplicationPackage;
 
 public class AnagramProcessor {
 
-    public String process(String text){
-        String [] words = splitPhrase(text);
-        String[] reversedWords = new String[words.length];
-        for (int i = 0; i < words.length; i++){
+	public String process(String text){
+		if (text.trim().isEmpty()) {
+			return text;
+		}
+		String[] words = splitPhrase(text);
+		String[] reversedWords = new String[words.length];
+		for (int i = 0; i < words.length; i++) {
+			if (words[i].isEmpty()) {
+				reversedWords[i] = words[i];
+			} else {
+				reversedWords[i] = reverseWord(words[i]);
+			}
+		}
+		return String.join("", reversedWords);
+	}
 
-            reversedWords[i] = reverseWord(words[i]);
-        }
-        return String.join(" ", reversedWords);
-    }
 
-    public String[] splitPhrase(String phraseToSplite){
-
-        String [] words = phraseToSplite.split("\\s+");
-        return words;
-    }
+	public String[] splitPhrase(String text) {
+		return text.split("(?<=\\s)|(?=\\s)");
+	}
 
     private String reverseWord(String wordForReverse){
         int lengthOfWord = wordForReverse.length();
