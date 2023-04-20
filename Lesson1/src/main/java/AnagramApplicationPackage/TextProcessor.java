@@ -13,8 +13,12 @@ public class TextProcessor {
         return phrase;
     }
 
-    public void outputResult(String result){
-        System.out.println(result);
-    }
+	public void outputResult(String result) {
+		if (result == null) {
+			throw new NullPointerException("Result must not be null");
+		}
+		System.out.println(result);
+	}
+
 
 }

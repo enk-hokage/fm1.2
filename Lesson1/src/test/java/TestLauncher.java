@@ -10,17 +10,12 @@ import java.io.PrintWriter;
 public class TestLauncher {
 	public static void main(String[] args) {
 		var launcher = LauncherFactory.create();
-		//launcher.registerLauncherDiscoveryListeners();
-		//launcher.registerTestExecutionListeners();
 
 		var summaryGeneratingListener = new SummaryGeneratingListener();
-	//	launcher.registerLauncherDiscoveryListeners();
-		//launcher.registerTestExecutionListeners();
 
 		LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder
 			.request()
-				.selectors(DiscoverySelectors.selectClass(TextProcessorTest.class))
-			//.selectors(DiscoverySelectors.selectPackage("test.java"))
+				.selectors(DiscoverySelectors.selectClass(TextProcessorTest.class), DiscoverySelectors.selectClass(AnagramProcessorTest.class))
 					.build();
 
 		launcher.execute(request, summaryGeneratingListener);
